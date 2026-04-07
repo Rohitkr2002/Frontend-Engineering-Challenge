@@ -1,0 +1,182 @@
+.container {
+  padding: 2rem;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill the frame */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  color: #2563eb;
+  padding: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 8px;
+}
+
+.header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.monthName {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-left: auto;
+}
+
+.inputWrapper {
+  margin-bottom: 2rem;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  max-height: 120px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #334155;
+  background: #f8fafc;
+  resize: none;
+  transition: all 0.2s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.addBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.addBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.notesList {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.noteCard {
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.noteCard:hover {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+}
+
+.noteCard p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 24px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.deleteBtn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.rangeInfo {
+  margin-top: auto;
+  padding: 12px;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+}
+
+.infoTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.rangeInfo p {
+  font-size: 0.85rem;
+  color: #1e40af;
+  margin: 0;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .container { background: #0f172a; border-color: rgba(255, 255, 255, 0.1); }
+[data-theme='dark'] .header h3 { color: white; }
+[data-theme='dark'] .textarea { background: #1e293b; color: white; border-color: #334155; }
+[data-theme='dark'] .noteCard { background: #1e293b; border-color: #334155; }
+[data-theme='dark'] .noteCard p { color: #cbd5e1; }
+[data-theme='dark'] .rangeInfo { background: rgba(37, 99, 235, 0.1); }
+
+@media (max-width: 900px) {
+  .container {
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    height: auto;
+    padding: 1.5rem;
+  }
+}

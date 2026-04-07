@@ -1,0 +1,208 @@
+.calendarContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%; /* Fill the frame */
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.heroWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 550px; /* Increased further for maximum impact */
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.monthOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 2.5rem 4rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.monthOverlay h2 {
+  font-family: var(--font-playfair), serif;
+  font-size: 2.8rem; /* Scaled down further for long names like September */
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.1;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: visible;     /* Ensure no clipping */
+}
+
+.monthOverlay span {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.mainContent {
+  padding: 2.5rem; /* Reduced padding from 4rem for better fit */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  overflow-y: auto; /* Just in case */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.navBtn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.resetBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.resetBtn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.gridContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 12px;
+}
+
+.weekDay {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dayCell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.15s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.dayCell:hover:not(.selectedDay) {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.otherMonth {
+  color: #cbd5e1 !important;
+}
+
+.today {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.selectedDay {
+  background: #2563eb !important;
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  transform: scale(1.05);
+}
+
+.inRange {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.dayNumber {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .calendarContainer {
+    grid-template-columns: 1fr;
+  }
+  .heroWrapper {
+    height: 320px; /* Adjusted for mobile impact */
+  }
+  .monthOverlay {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+  .monthOverlay h2 {
+    font-size: 2rem;
+  }
+  .monthOverlay span {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+}
