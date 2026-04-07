@@ -5,7 +5,7 @@
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Licensed](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-### [Live Preview](https://github.com/Rohitkr2002/Frontend-Engineering-Challenge) &middot; [Report Bug](https://github.com/Rohitkr2002/Frontend-Engineering-Challenge/issues)
+### [Live Preview](https://Rohitkr2002.github.io/Frontend-Engineering-Challenge/) &middot; [Report Bug](https://github.com/Rohitkr2002/Frontend-Engineering-Challenge/issues)
 
 ---
 

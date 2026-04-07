@@ -98,7 +98,7 @@ const Calendar: React.FC<CalendarProps> = ({ onRangeChange }) => {
     <div className={styles.calendarContainer}>
       {/* Hero Section */}
       <div className={styles.heroWrapper}>
-        <img src="/hero-adventure.png" alt="Inspiration" className={styles.heroImage} />
+        <img src="hero-adventure.png" alt="Inspiration" className={styles.heroImage} />
         <div className={styles.monthOverlay}>
           <span>{format(currentMonth, 'yyyy')}</span>
           <h2>{format(currentMonth, 'MMMM')}</h2>
